@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/jayvicsanantonio/Developer/uigen/logs/.8f282555609e2ea9c181a01d6f60aac96b8da95b-audit.json",
+    "files": [
+        {
+            "date": 1755482056853,
+            "name": "/Users/jayvicsanantonio/Developer/uigen/logs/mcp-puppeteer-2025-08-17.log",
+            "hash": "685bcf9c533a226fa370740e186029d2f3681173367b63572341189351935817"
+        }
+    ],
+    "hashType": "sha256"
+}
