@@ -78,7 +78,55 @@ test("MessageList renders messages with parts", () => {
   render(<MessageList messages={messages} />);
 
   expect(screen.getByText("Creating your component...")).toBeDefined();
-  expect(screen.getByText("str_replace_editor")).toBeDefined();
+  expect(screen.getByText("Editing file...")).toBeDefined();
+});
+
+test("MessageList shows friendly tool names for different commands", () => {
+  const messages: Message[] = [
+    {
+      id: "1",
+      role: "assistant",
+      content: "",
+      parts: [
+        {
+          type: "tool-invocation",
+          toolInvocation: {
+            toolCallId: "create",
+            args: { command: "create" },
+            toolName: "str_replace_editor",
+            state: "result",
+            result: "Success",
+          },
+        },
+        {
+          type: "tool-invocation",
+          toolInvocation: {
+            toolCallId: "replace",
+            args: { command: "str_replace" },
+            toolName: "str_replace_editor",
+            state: "result",
+            result: "Success",
+          },
+        },
+        {
+          type: "tool-invocation",
+          toolInvocation: {
+            toolCallId: "insert",
+            args: { command: "insert" },
+            toolName: "str_replace_editor",
+            state: "result",
+            result: "Success",
+          },
+        },
+      ],
+    },
+  ];
+
+  render(<MessageList messages={messages} />);
+
+  expect(screen.getByText("Creating file...")).toBeDefined();
+  expect(screen.getByText("Updating code...")).toBeDefined();
+  expect(screen.getByText("Adding content...")).toBeDefined();
 });
 
 test("MessageList shows content for assistant message with content", () => {

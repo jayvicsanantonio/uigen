@@ -1,0 +1,22 @@
+
+> uigen@0.1.0 test
+> vitest --run
+
+
+ RUN  v3.2.4 /Users/jayvicsanantonio/Developer/uigen
+
+ ✓ src/lib/transform/__tests__/jsx-transformer.test.ts (29 tests) 10ms
+ ✓ src/lib/__tests__/file-system.test.ts (60 tests) 13ms
+ ✓ src/components/chat/__tests__/ChatInterface.test.tsx (8 tests) 28ms
+ ✓ src/lib/contexts/__tests__/file-system-context.test.tsx (25 tests) 29ms
+ ✓ src/components/editor/__tests__/file-tree.test.tsx (8 tests) 54ms
+ ✓ src/components/chat/__tests__/MessageList.test.tsx (14 tests) 45ms
+ ✓ src/components/chat/__tests__/MarkdownRenderer.test.tsx (21 tests) 78ms
+ ✓ src/lib/contexts/__tests__/chat-context.test.tsx (6 tests) 129ms
+ ✓ src/components/chat/__tests__/MessageInput.test.tsx (15 tests) 105ms
+
+ Test Files  9 passed (9)
+      Tests  186 passed (186)
+   Start at  19:16:43
+   Duration  962ms (transform 619ms, setup 0ms, collect 1.65s, tests 491ms, environment 3.44s, prepare 632ms)
+

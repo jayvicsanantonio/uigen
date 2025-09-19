@@ -1,5 +1,11 @@
 {
   "permissions": {
+    "allow": [
+      "Bash(git shortlog:*)",
+      "Bash(git log:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run build:*)"
+    ],
     "defaultMode": "acceptEdits"
   }
 }
